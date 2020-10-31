@@ -2,6 +2,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import PlanetDetailsPage from './pages/PlanetDetailsPage';
 import Planets from './pages/Planets';
+import NotFoundPage from './pages/NotFoundPage';
 
 import './App.css';
 
@@ -20,6 +21,7 @@ export default () => (
                         )
                     }}
                 />
+                <Route path="*" component={NotFoundPage} />
             </Switch>
         </div>
 )

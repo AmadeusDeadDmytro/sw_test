@@ -19,7 +19,7 @@ const PlanetDetailsPage = ({ planetId }) => {
                     <div className="app__logo__title">go to Catalog Planet</div>
                 </div>
             </NavLink>
-
+            {data.detail !== 'Not found' ? (
               <div>
                   <div>Name: {data.name}</div>
                   <div>Orbital period: {data.orbital_period}</div>
@@ -28,11 +28,17 @@ const PlanetDetailsPage = ({ planetId }) => {
                   <div>Gravity: {data.gravity}</div>
                   <div>Terrain: {data.terrain ? data.terrain : 'no found terrain'}</div>
                   <div>Population: {data.population}</div>
-                  <div>Residents: {data.residents?.map(resident => (
+                  <div>Residents: {data.residents.length ? data.residents.map(resident => (
                       <Resident residentUrl={resident} />
-                  ))}
+                  )) : (
+                      <div>hasn't found</div>
+                  )}
                   </div>
               </div>
+            ) : (
+                <div>{data.detail} this planet</div>
+            )}
+
         </div>
     )
 }
