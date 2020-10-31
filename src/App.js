@@ -1,8 +1,10 @@
+import Planets from './pages/Planets';
 import './App.css';
+
 
 export default () => (
         <div>
-           hello world
+            <Planets />
         </div>
 )
 
