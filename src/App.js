@@ -4,8 +4,6 @@ import PlanetDetailsPage from './pages/PlanetDetailsPage';
 import Planets from './pages/Planets';
 import NotFoundPage from './pages/NotFoundPage';
 
-import './App.css';
-
 export default () => (
         <div>
             <Switch>

@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from 'react-query';
 
 const Resident = ({ residentUrl }) => {
-    const { isLoading, error, data } = useQuery('DataOfPlanetPeople', () => fetch(residentUrl).then(res => res.json()))
+    const { isLoading, error, data } = useQuery(residentUrl, () => fetch(residentUrl).then(res => res.json()))
 
     if (isLoading) return 'Loading...'
 
