@@ -4,7 +4,9 @@ import PlanetDetailsPage from './pages/PlanetDetailsPage';
 import Planets from './pages/Planets';
 import NotFoundPage from './pages/NotFoundPage';
 
-export default () => (
+export default () => {
+
+    return (
         <div>
             <Switch>
                 <Route path="/" exact component={Planets} />
@@ -22,5 +24,7 @@ export default () => (
                 <Route path="*" component={NotFoundPage} />
             </Switch>
         </div>
-)
+    )
+}
+
 

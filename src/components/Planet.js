@@ -12,21 +12,29 @@ const useStyles = makeStyles({
     root: {
         minWidth: 275,
         margin: '10px 10px',
-        background: "ButtonShadow"
+        background: "#22222c",
+        border: "1px solid #82829a"
     },
     title: {
         fontSize: 14,
-        color: "WindowText"
+        color: "#82829a"
     },
     text: {
         fontSize: 16,
-        color: "seashell"
+        color: "#dadbd6"
     },
     bullet: {
         display: 'inline-block',
         margin: '10px 2px',
         transform: 'scale(0.8)',
-        background: "Window"
+        background: "#22222c",
+        color:  "#dadbd6",
+        border: "1px solid #82829a",
+        cursor: 'pointer',
+        '&:hover': {
+            backgroundColor: "#dadbd6",
+            color: "#22222c"
+        }
     },
 });
 

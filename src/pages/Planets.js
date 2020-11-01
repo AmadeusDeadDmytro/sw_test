@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import { makeStyles } from '@material-ui/core/styles';
+import { Container } from '@material-ui/core';
 
 import Planet from '../components/Planet';
 
@@ -20,11 +21,14 @@ const Planets = () => {
     if (error) return 'An error has occurred: ' + error.message;
 
     return (
-        <div className={classes.root}>
-            {data.results?.map((planet, index) => (
-                <Planet key={index} planet={planet} index={index + 1} />
-            ))}
-        </div>
+        <Container>
+            <div className={classes.root}>
+                {data.results?.map((planet, index) => (
+                    <Planet key={index} planet={planet} index={index + 1} />
+                ))}
+            </div>
+        </Container>
+
     )
 }
 
